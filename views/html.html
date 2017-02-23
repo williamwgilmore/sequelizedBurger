@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> -->
+		<title>Burger</title>
+		<script
+		src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class = 'container'>
+			<div class = 'row'>
+				<div class = 'jumbotron text-center'>
+					<h1>Burger</h1>
+				</div>
+			</div>
+			<div class = 'row'>
+				<div class = 'col-md-2 col-md-offset-4'>
+					<h3>Burgers to Eat</h3>
+					<ul class = 'uneaten'>
+						<li>
+							<h4 class = 'newBurger'></h4>
+						</li>
+					</ul>
+				</div>
+				<div class = 'col-md-2'>
+					<h3>Eaten Burgers</h3>
+					<ul class = 'eaten'>
+						<li>
+							<h4 class = 'oldBurger'></h4>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class = 'row'>
+				<div class = 'container'>
+					<h2 class = 'text-center'>Create a Burger</h2>
+					<form class="create-update-form text-center">
+						<div class="form-group text-center">
+							<label for="burger">Burger:</label>
+							<input placeholder="Enter a name" id="burger-name" type="text"/>
+						</div>
+						<button type="submit" class='burgerButton'>Add Burger</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+	$('.burgerButton').on('click', addBurger);
+
+	function addBurger(event) {
+    	event.preventDefault();
+
+    	var newPost = {
+    		burger_name: burger
+    	}	
+    	
+    	submitPost(newPost);
+  		}
+
+  		
+
+	</script>
+</html>
